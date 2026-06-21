@@ -31,15 +31,17 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📸 Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
+Sample game on **Normal** difficulty (range 1–100, 8 attempts allowed):
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
-
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+1. App loads. The info bar shows "Attempts left: 8". Developer Debug Info checkbox is unchecked by default.
+2. User opens the Developer Debug Info panel — secret number is revealed as **54** (for demo purposes).
+3. User types **40** and clicks Submit Guess. Game returns "📉 Go HIGHER!" and score drops by 5 (score: -5).
+4. User types **70** and clicks Submit Guess. Game returns "📉 Go LOWER!" and score drops by 5 again (score: -10). Attempts left updates to 6.
+5. User types **110** and clicks Submit Guess. Game shows an error: "Please enter a number between 1 and 100." No attempt is counted, history is unchanged.
+6. User types **abc** and clicks Submit Guess. Game shows "That is not a number." No attempt counted, nothing added to history.
+7. User types **54** and clicks Submit Guess. Game returns "🎉 Correct!" with balloons. Win bonus is added to score (100 - 10 × 3 = 70, final score: 60).
+8. Game status locks to "won". Submit is blocked and the success message reads: "You won! The secret was 54. Final score: 60."
+9. User clicks New Game. Attempts reset to 0, score resets to 0, history clears, and a fresh secret number is chosen within the selected difficulty range.
 
 ## 🧪 Test Results
 
